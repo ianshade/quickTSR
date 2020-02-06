@@ -89,6 +89,26 @@ export const input: TSRInput = {
 				input: 'C:/Users/krzyc/Downloads/Audio_Video Sync Test 1080P60.mp4'
 			}
 		},
+		{
+			id: 'audio',
+			enable: {
+				start: Date.now()+6000,
+				duration: 8000
+			},
+			layer: 'vmixLayer1',
+			content: {
+				deviceType: DeviceType.VMIX,
+				type: TimelineContentTypeVMix.AUDIO,
+				input: 'C:/Users/krzyc/Downloads/Audio_Video Sync Test 1080P60.mp4',
+				volume: 60,
+				balance: -0.5,
+				audioAuto: false,
+				muted: false,
+				audioBuses: 'M,A',
+				fade: 1000
+			}
+		},
+
 		// {
 		// 	id: 'program02',
 		// 	enable: {
@@ -164,23 +184,6 @@ export const input: TSRInput = {
 		*/
 
 
-		// {
-		// 	id: 'audio',
-		// 	enable: {
-		// 		start: Date.now()+4000,
-		// 		duration: 2000
-		// 	},
-		// 	layer: 'vmixLayer2',
-		// 	content: {
-		// 		deviceType: DeviceType.VMIX,
-		// 		type: TimelineContentTypeVMix.AUDIO,
-		// 		input: 2,
-		// 		volume: 60,
-		// 		balance: -0.5
-		// 	}
-		// },
-
-		
 		// {
 		// 	id: 'ftb',
 		// 	enable: {
