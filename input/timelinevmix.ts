@@ -57,10 +57,30 @@ export const input: TSRInput = {
 						duration: 10000
 					},
 					content: {
-						playing: true
+						playing: true,
+						overlays: {
+							1: 'G:/qt projects/LivemindSignalGenerator/SignalGenerator/images/patterns/ramp.png'
+						}
 					}
 				},
 			]
+		},
+		{
+			id: 'inputOverlayOverwrite',
+			enable: {
+				start: Date.now()+6000,
+				duration: 20000
+			},
+			layer: 'vmixLayer5',
+			content: {
+				deviceType: DeviceType.VMIX,
+				type: TimelineContentTypeVMix.INPUT,
+				inputType: VMixInputType.Video,
+				input: 'C:/Users/krzyc/Downloads/Audio_Video Sync Test 1080P60.mp4',
+				overlays: {
+					2: 1
+				}
+			}
 		},
 		{
 			id: 'image',
@@ -74,6 +94,31 @@ export const input: TSRInput = {
 				type: TimelineContentTypeVMix.INPUT,
 				inputType: VMixInputType.Image,
 				input: 'G:/qt projects/LivemindSignalGenerator/SignalGenerator/images/patterns/ramp.png',
+				transform: {
+					zoom: 0.5,
+					panX: 0.3,
+					panY: 0.2,
+					alpha: 128
+				}
+			}
+		},
+		{
+			id: 'imageTrOverwrite',
+			enable: {
+				start: Date.now()+12000,
+				duration: 3000
+			},
+			layer: 'vmixLayer4',
+			content: {
+				deviceType: DeviceType.VMIX,
+				type: TimelineContentTypeVMix.INPUT,
+				input: 'G:/qt projects/LivemindSignalGenerator/SignalGenerator/images/patterns/ramp.png',
+				transform: {
+					zoom: 2,
+					panX: -0.3,
+					panY: -0.2,
+					alpha: 128
+				}
 			}
 		},
 		{

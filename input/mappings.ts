@@ -20,6 +20,14 @@ export const input: TSRInput = {
 			device: DeviceType.VMIX,
 			deviceId: 'vmix0',
 		}),
+		'vmixLayer4': literal<MappingVMix>({
+			device: DeviceType.VMIX,
+			deviceId: 'vmix0',
+		}),
+		'vmixLayer5': literal<MappingVMix>({
+			device: DeviceType.VMIX,
+			deviceId: 'vmix0',
+		}),
 		// 'casparLayer0': literal<MappingCasparCG>({
 		// 	device: DeviceType.CASPARCG,
 		// 	deviceId: 'caspar0',
