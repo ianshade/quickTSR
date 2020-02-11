@@ -131,7 +131,8 @@ export const input: TSRInput = {
 			content: {
 				deviceType: DeviceType.VMIX,
 				type: TimelineContentTypeVMix.PROGRAM,
-				input: 'C:/Users/krzyc/Downloads/Audio_Video Sync Test 1080P60.mp4'
+				//input: 'C:/Users/krzyc/Downloads/Audio_Video Sync Test 1080P60.mp4'
+				inputLayer: 'vmix_media0'
 			}
 		},
 		{
@@ -151,6 +152,19 @@ export const input: TSRInput = {
 				muted: false,
 				audioBuses: 'M,A',
 				fade: 1000
+			}
+		},
+		{
+			id: 'program04',
+			enable: {
+				start: Date.now()+15000,
+				duration: 10000
+			},
+			layer: 'vmixLayer0',
+			content: {
+				deviceType: DeviceType.VMIX,
+				type: TimelineContentTypeVMix.PROGRAM,
+				input: 1
 			}
 		},
 
